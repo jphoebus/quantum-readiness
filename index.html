@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Are State Rules Ready for Quantum Computing? A Five-State Check</title>
+<meta name="description" content="Whether the rules Pennsylvania, Virginia, Ohio, Maryland, and Georgia wrote for data centers would apply to quantum computing facilities: tax exemptions, large-load tariffs, reporting, and state strategy. Current as of October 2026.">
+<meta property="og:title" content="Are State Rules Ready for Quantum Computing? A Five-State Check">
+<meta property="og:description" content="Whether the rules five states wrote for data centers would apply to quantum computing: tax exemptions, tariffs, reporting, and state strategy.">
+<meta property="og:image" content="https://jphoebus.github.io/quantum-readiness/quantum-preview.png">
+<meta property="og:url" content="https://jphoebus.github.io/quantum-readiness/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --limestone: #EDF0F1;
+    --paper: #FFFFFF;
+    --ink: #1B2631;
+    --slate: #52606D;
+    --rule: #CBD2D9;
+    --accent: #1F5C4A;
+    --accent-soft: #DCEBE5;
+    --font: "Public Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--limestone);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  .measure { max-width: 68ch; }
+
+  /* Header */
+  header { padding: 64px 0 40px; }
+  h1 {
+    font-size: clamp(2rem, 4.6vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 20px;
+    max-width: 18ch;
+  }
+  .lede { font-size: 1.15rem; color: var(--slate); margin: 0; }
+
+  /* Where each state stands */
+  .standing {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-top: 3px solid var(--ink);
+    margin-top: 40px;
+  }
+  .standing div {
+    padding: 16px 16px 20px 0;
+    border-right: 1px solid var(--rule);
+    padding-left: 16px;
+  }
+  .standing div:first-child { padding-left: 0; }
+  .standing div:last-child { border-right: 0; }
+  .standing strong { display: block; font-size: 1.25rem; font-weight: 700; }
+  .standing span { display: block; color: var(--slate); font-size: 0.95rem; }
+  .standing time { display: block; font-size: 0.85rem; color: var(--accent); font-weight: 600; margin-top: 6px; }
+
+  /* Comparison */
+  section { padding: 48px 0; }
+  h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.01em; margin: 0 0 12px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 20px; align-items: center; }
+  .filters p { margin: 0 8px 0 0; color: var(--slate); font-size: 0.95rem; }
+  .chip {
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border: 1.5px solid var(--accent);
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+  }
+  .chip[aria-pressed="false"] { background: transparent; color: var(--accent); }
+  .table-scroll {
+    overflow-x: auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+  }
+  table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 0.92rem; }
+  th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--rule); }
+  thead th {
+    font-size: 1rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--ink);
+    position: sticky;
+    top: 0;
+    background: var(--paper);
+  }
+  tbody th {
+    font-weight: 600;
+    color: var(--slate);
+    width: 170px;
+    position: sticky;
+    left: 0;
+    background: var(--paper);
+  }
+  tr.group th {
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  [hidden] { display: none !important; }
+  td.empty { color: var(--slate); font-style: italic; }
+  td.sources a { display: block; word-break: break-word; margin-bottom: 4px; }
+  .status-msg { padding: 24px; color: var(--slate); }
+
+  /* Analysis */
+  .analysis { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .analysis h3 { font-size: 1.1rem; font-weight: 700; margin: 24px 0 4px; }
+  .analysis p { margin: 0; }
+  .question {
+    margin-top: 32px;
+    padding-left: 20px;
+    border-left: 4px solid var(--accent);
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  ul.watch { padding-left: 1.1em; margin: 12px 0 0; }
+  ul.watch li { margin-bottom: 10px; }
+
+  footer { border-top: 1px solid var(--rule); padding: 40px 0 64px; color: var(--slate); font-size: 0.95rem; }
+  footer p { margin: 0 0 12px; }
+
+  @media (max-width: 800px) {
+    .standing { grid-template-columns: 1fr 1fr; }
+    .standing div { border-right: 0; border-bottom: 1px solid var(--rule); padding-left: 0; }
+    .analysis { grid-template-columns: 1fr; gap: 16px; }
+    header { padding-top: 40px; }
+  }
+  @media print {
+    .filters { display: none; }
+    body { background: #fff; }
+    .table-scroll { overflow: visible; border: 0; }
+    thead th, tbody th { position: static; }
+  }
+  .note { color: var(--slate); font-size: 0.9rem; margin-top: 12px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Are state rules ready for quantum computing?</h1>
+    <p class="lede measure">Whether the rules Pennsylvania, Virginia, Ohio, Maryland, and Georgia wrote for data centers would apply to quantum computing facilities: tax exemptions, large-load tariffs, reporting, and each state's quantum strategy. Current as of October 2026.</p>
+    <p class="lede measure" style="margin-top:12px">The other comparisons in this series look at decisions states have already made about data centers. This one looks ahead, applying the lessons of the data center build-out to the next wave of computing infrastructure.</p>
+
+    <div class="standing" aria-label="Where each state stands on quantum">
+      <div><strong>Pennsylvania</strong><span>University network; no quantum statute</span></div>
+      <div><strong>Virginia</strong><span>Regional hub at George Mason</span></div>
+      <div><strong>Ohio</strong><span>$7M institute; IBM system at Cleveland Clinic</span></div>
+      <div><strong>Maryland</strong><span>Capital of Quantum; $54M in FY2027</span></div>
+      <div><strong>Georgia</strong><span>University-led; no state action</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="comparison">
+    <div class="wrap">
+      <h2>Side-by-side comparison</h2>
+      <p class="measure">Choose which states to compare. On a phone, scroll the table sideways.</p>
+      <div class="filters" id="filters" role="group" aria-label="States to compare"><p>Showing:</p><button class="chip" type="button" aria-pressed="true" data-state="pennsylvania">Pennsylvania</button><button class="chip" type="button" aria-pressed="true" data-state="virginia">Virginia</button><button class="chip" type="button" aria-pressed="true" data-state="ohio">Ohio</button><button class="chip" type="button" aria-pressed="true" data-state="maryland">Maryland</button><button class="chip" type="button" aria-pressed="true" data-state="georgia">Georgia</button></div>
+      <div class="table-scroll" tabindex="0" aria-label="Comparison table">
+        <table id="table">
+<thead><tr><th scope="col"></th>
+<th scope="col" data-state="pennsylvania">Pennsylvania</th>
+<th scope="col" data-state="virginia">Virginia</th>
+<th scope="col" data-state="ohio">Ohio</th>
+<th scope="col" data-state="maryland">Maryland</th>
+<th scope="col" data-state="georgia">Georgia</th>
+</tr></thead><tbody>
+<tr class="group"><th colspan="6" scope="colgroup">Strategy and funding</th></tr>
+<tr><th scope="row">State quantum strategy</th>
+<td data-state="pennsylvania">Keystone AI + Quantum Factory (April 2026), a statewide network of the seven R1 research universities with Commonwealth support; House Communications and Technology Committee informational meeting on quantum (Aug. 11, 2026); no quantum statute</td>
+<td data-state="virginia">Virginia Quantum Hub at George Mason University (September 2026); Joint Commission on Technology and Science quantum study (2025); no quantum statute</td>
+<td data-state="ohio">Ohio Institute for Quantum Computing Research, Talent, and Commercialization (Miami University with Cleveland Clinic), funded in the FY2026-27 budget; IBM Quantum System One installed at Cleveland Clinic in 2023; no quantum statute</td>
+<td data-state="maryland">Capital of Quantum initiative (January 2025), a public-private partnership seeking $1 billion in investment; December 2024 executive order named quantum a priority industry; DARPA benchmarking hub agreement (April 2025)</td>
+<td data-state="georgia">No state-level quantum action identified; activity is led by Georgia Tech, including its Quantum Applications Research Center (October 2026) and the Georgia Tech Research Institute&#x27;s role in DARPA&#x27;s Quantum Benchmarking Initiative</td>
+</tr>
+<tr><th scope="row">State funding (confirmed)</th>
+<td class="empty" data-state="pennsylvania">No quantum-specific appropriation identified</td>
+<td data-state="virginia">$3,684,912 GO Virginia Region 7 grant for the Virginia Quantum Hub</td>
+<td data-state="ohio">$7,000,000 in the enacted FY2026-27 budget (HB 96); $14M was originally proposed</td>
+<td data-state="maryland">FY2026 proposal: $27.5M initial investment; FY2027 budget: $54M ($20M for IonQ&#x27;s headquarters, $22M for UMD quantum programs and testbeds, $12M for faculty and technical experts)</td>
+<td class="empty" data-state="georgia">No quantum-specific appropriation identified</td>
+</tr>
+<tr><th scope="row">Key institutions</th>
+<td data-state="pennsylvania">Carnegie Mellon, Drexel, Lehigh, Penn State, Temple, Penn, Pitt; Pittsburgh Supercomputing Center</td>
+<td data-state="virginia">George Mason University, Virginia Tech, Virginia Innovation Partnership Corporation</td>
+<td data-state="ohio">Miami University, Cleveland Clinic</td>
+<td data-state="maryland">University of Maryland, IonQ, Applied Research Laboratory for Intelligence and Security</td>
+<td data-state="georgia">Georgia Tech, Georgia Tech Research Institute</td>
+</tr>
+<tr class="group"><th colspan="6" scope="colgroup">Tax incentives</th></tr>
+<tr><th scope="row">Quantum named in data center tax law?</th>
+<td data-state="pennsylvania">No</td>
+<td data-state="virginia">No</td>
+<td data-state="ohio">No</td>
+<td data-state="maryland">No</td>
+<td data-state="georgia">No</td>
+</tr>
+<tr><th scope="row">Equipment language</th>
+<td data-state="pennsylvania">Equipment used to &quot;outfit, operate or benefit a computer data center,&quot; including mechanical equipment and refrigerant piping (Department of Revenue guidelines)</td>
+<td data-state="virginia">&quot;Computer equipment or enabling software ... including ... other enabling hardware, including chillers and backup generators&quot; (Va. Code § 58.1-609.3(18)); Tax Commissioner Ruling 23-92 extends to HVAC and cooling towers</td>
+<td data-state="ohio">Property used &quot;to conduct a computer data center business, including equipment cooling systems&quot; (Ohio Rev. Code § 122.175)</td>
+<td data-state="maryland">&quot;Computer equipment or enabling software ... including servers, routers, connections, and other enabling hardware&quot; (Md. Tax-General § 11-239)</td>
+<td data-state="georgia">Equipment used to &quot;generate or provide constant delivery of power, environmental conditioning, air cooling&quot; for computer equipment (Ga. Comp. R. &amp; Regs. 560-12-2-.117)</td>
+</tr>
+<tr><th scope="row">Cryogenic cooling plausibly covered?</th>
+<td data-state="pennsylvania">Plausibly</td>
+<td data-state="virginia">Plausibly</td>
+<td data-state="ohio">Plausibly</td>
+<td data-state="maryland">Plausibly</td>
+<td data-state="georgia">Plausibly</td>
+</tr>
+<tr><th scope="row">Would a quantum facility qualify?</th>
+<td data-state="pennsylvania">Unlikely: $75M or $100M investment and 25 or 45 jobs; qualified tenants must commit to at least 100 kW per month</td>
+<td data-state="virginia">Unlikely: $150M investment plus jobs under a VEDP memorandum of understanding</td>
+<td data-state="ohio">Unlikely: must be a computer data center business providing electronic information services, with $100M investment and $1.5M payroll; research use would not qualify</td>
+<td data-state="maryland">Possible: $2M (Tier 1 area) or $5M investment and five qualified positions; whether a quantum facility counts as a data center is untested</td>
+<td data-state="georgia">Unlikely: county-tiered minimums of $25M to $250M plus jobs</td>
+</tr>
+<tr><th scope="row">Quantum-specific tax incentive</th>
+<td data-state="pennsylvania">None</td>
+<td data-state="virginia">None</td>
+<td data-state="ohio">None</td>
+<td data-state="maryland">None in tax law; support comes through appropriations and grants</td>
+<td data-state="georgia">None</td>
+</tr>
+<tr class="group"><th colspan="6" scope="colgroup">Electricity and reporting</th></tr>
+<tr><th scope="row">Large-load threshold</th>
+<td data-state="pennsylvania">50 MW individually or 100 MW aggregate (PUC model tariff)</td>
+<td data-state="virginia">25 MW (Dominion GS-5 rate class)</td>
+<td data-state="ohio">25 MW (AEP Ohio data center tariff)</td>
+<td data-state="maryland">25 MW (Utility RELIEF Act)</td>
+<td data-state="georgia">100 MW (PSC large-load rule)</td>
+</tr>
+<tr><th scope="row">Would the tariff apply?</th>
+<td data-state="pennsylvania">No</td>
+<td data-state="virginia">No</td>
+<td data-state="ohio">No</td>
+<td data-state="maryland">No</td>
+<td data-state="georgia">No</td>
+</tr>
+<tr><th scope="row">Facility reporting rule</th>
+<td data-state="pennsylvania">Act 21 of 2026 covers facilities predominantly housing servers with peak demand of 10 MW or more; a quantum facility would meet neither test</td>
+<td data-state="virginia">No facility-level reporting rule; the SCC&#x27;s annual report aggregates data center figures from utilities</td>
+<td class="empty" data-state="ohio">None identified</td>
+<td class="empty" data-state="maryland">None identified</td>
+<td class="empty" data-state="georgia">None identified</td>
+</tr>
+<tr class="group"><th colspan="6" scope="colgroup">Security</th></tr>
+<tr><th scope="row">State post-quantum cryptography mandate</th>
+<td class="empty" data-state="pennsylvania">None identified</td>
+<td class="empty" data-state="virginia">None identified</td>
+<td class="empty" data-state="ohio">None identified</td>
+<td class="empty" data-state="maryland">None identified</td>
+<td class="empty" data-state="georgia">None identified</td>
+</tr>
+<tr class="group"><th colspan="6" scope="colgroup">Status and sources</th></tr>
+<tr><th scope="row">Still to verify</th>
+<td class="empty" data-state="pennsylvania">Nothing outstanding</td>
+<td class="empty" data-state="virginia">Nothing outstanding</td>
+<td class="empty" data-state="ohio">Nothing outstanding</td>
+<td data-state="maryland">Enacted FY2026 quantum total (sources conflict)</td>
+<td class="empty" data-state="georgia">Nothing outstanding</td>
+</tr>
+<tr><th scope="row">Sources</th>
+<td class="sources" data-state="pennsylvania"><a href="https://keystonefactory.org/keystone-ai-and-quantum-factory-launch/" rel="noopener">keystonefactory.org</a><a href="https://www.palegis.us/house/committees/meeting-archive?MeetingId=5733" rel="noopener">palegis.us</a><a href="https://penncapital-star.com/technology-information/pa-poised-to-lead-in-quantum-computing-field-state-lawmakers-hear/" rel="noopener">penncapital-star.com</a><a href="https://www.pa.gov/content/dam/copapwp-pagov/en/revenue/documents/incentivescreditsprograms/computerdatacenterequipprog/documents/computer_data_center_equip_exemption_program_guidelines.pdf" rel="noopener">pa.gov</a></td>
+<td class="sources" data-state="virginia"><a href="https://www.governor.virginia.gov/newsroom/news-releases/2026/september-releases/name-1123626-en.html" rel="noopener">governor.virginia.gov</a><a href="https://dls.virginia.gov/commissions/jcots/materials/2025_quantum_report.pdf" rel="noopener">dls.virginia.gov</a><a href="https://law.lis.virginia.gov/vacode/title58.1/chapter6/section58.1-609.3/" rel="noopener">law.lis.virginia.gov</a><a href="https://www.tax.virginia.gov/laws-rules-decisions/rulings-tax-commissioner/23-92" rel="noopener">tax.virginia.gov</a></td>
+<td class="sources" data-state="ohio"><a href="https://www.lsc.ohio.gov/assets/legislation/136/hb96/en0/files/hb96-bor-greenbook-as-enacted-136th-general-assembly.pdf" rel="noopener">lsc.ohio.gov</a><a href="https://miamioh.edu/news/2025/07/state-of-ohio-awards-miami-university-7-million-to-create-quantum-computing-workforce-in-ohio.html" rel="noopener">miamioh.edu</a><a href="https://www.jobsohio.com/newsroom/ohio-blog/ohio-welcomes-worlds-first-quantum-computer-dedicated-to-healthcare-research" rel="noopener">jobsohio.com</a><a href="https://codes.ohio.gov/ohio-revised-code/section-122.175" rel="noopener">codes.ohio.gov</a></td>
+<td class="sources" data-state="maryland"><a href="https://governor.maryland.gov/news/press-releases/governor-moore-announces-1-billion-capital-quantum-initiative" rel="noopener">governor.maryland.gov</a><a href="https://governor.maryland.gov/news/press/pages/Governor-Moore-Signs-FY-2027-Budget,-Delivering-Historic-Education-and-Public-Safety-Investments-without-Raising-Taxes-or-F.aspx" rel="noopener">governor.maryland.gov</a><a href="https://today.umd.edu/briefs/new-state-budget-funds-quantum-health-research-capital-projects-other-umd-priorities" rel="noopener">today.umd.edu</a><a href="https://law.justia.com/codes/maryland/tax-general/title-11/subtitle-2/section-11-239/" rel="noopener">law.justia.com</a></td>
+<td class="sources" data-state="georgia"><a href="https://www.hpcwire.com/off-the-wire/georgia-tech-launches-center-to-advance-quantum-research-and-innovation/" rel="noopener">hpcwire.com</a><a href="https://www.newswise.com/articles/gtri-supports-initiative-to-assess-quantum-computing-efforts" rel="noopener">newswise.com</a><a href="https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-560-12-2-.117" rel="noopener">law.cornell.edu</a></td>
+</tr>
+<tr><th scope="row">Last updated</th>
+<td data-state="pennsylvania">2026-10-07</td>
+<td data-state="virginia">2026-10-07</td>
+<td data-state="ohio">2026-10-07</td>
+<td data-state="maryland">2026-10-07</td>
+<td data-state="georgia">2026-10-07</td>
+</tr>
+</tbody>
+        </table>
+      </div>
+      <p class="note measure">"Plausibly covered" means the statute's cooling or equipment language could reasonably reach cryogenic systems; no state agency has ruled on the question. Power comparisons use published measurements of superconducting quantum computers: about 26 kW for Google's Sycamore system (<a href="https://arxiv.org/pdf/1910.11333">Arute et al.</a>), about 15 kW in an Oak Ridge and NASA estimate (<a href="https://arxiv.org/pdf/1905.00444">Villalonga et al.</a>), and a 30 kW peak for a system integrated with a supercomputer (<a href="https://arxiv.org/pdf/2509.12949">2025 case study</a>). Trapped-ion and neutral-atom systems use different cooling, and their facility loads are less documented.</p>
+    </div>
+  </section>
+
+  <section id="analysis">
+    <div class="wrap">
+      <div class="analysis">
+        <div>
+          <h2>What stands out</h2>
+          <h3>Quantum is not in any state's data center law</h3>
+          <p>All five exemptions define covered equipment in terms of classical computing: servers, routers, and equipment for processing and storing data. None mentions quantum, and no state agency has ruled on whether a quantum processor counts as computer equipment.</p>
+          <h3>The equipment could fit; the facilities mostly would not</h3>
+          <p>Cooling and equipment language in every state is broad enough to plausibly reach cryogenic systems. The barrier is the facility test: what counts as a data center, and investment floors of $75 million to $250 million in four states. Maryland's $2 million to $5 million floor is the exception.</p>
+          <h3>Power rules do not reach today's quantum systems</h3>
+          <p>A superconducting quantum computer draws roughly 15 to 30 kilowatts, about one-thousandth of a 25 MW large-load threshold and about one-four-hundredth of Pennsylvania's 10 MW reporting trigger. Future utility-scale quantum campuses, and quantum systems inside large AI and supercomputing campuses, could change that.</p>
+          <h3>State support runs through budgets, not tax law</h3>
+          <p>Maryland's appropriations, Ohio's $7 million institute, and Virginia's regional grant all fund quantum directly rather than through tax exemptions. Unlike open-ended exemptions, budget lines come up for decision every cycle, which makes them easier to evaluate.</p>
+        </div>
+        <div>
+          <h2>What to watch</h2>
+          <ul class="watch">
+            <li>Whether any state revenue agency rules on quantum equipment under its data center exemption.</li>
+            <li>Maryland's FY2028 budget and construction of IonQ's College Park headquarters.</li>
+            <li>Whether Pennsylvania legislation follows the House committee's August 2026 quantum hearing.</li>
+            <li>Federal action: reauthorization of the National Quantum Initiative (S. 3597) is pending, and Executive Order 14412 sets 2030 and 2031 post-quantum cryptography deadlines for federal systems.</li>
+            <li>Hybrid facilities: whether quantum systems placed inside AI data centers fall under those campuses' tariffs and reporting rules.</li>
+          </ul>
+          <p class="question">The question I expect to shape the next round: whether states clarify how quantum fits rules written for server farms before the first large quantum facilities arrive, rather than after.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap measure">
+    <p>Compiled by Joshua Phoebus, former Director of Performance and Transformation in the Office of Pennsylvania Governor Tom Wolf. <a href="https://www.linkedin.com/in/joshuaphoebus">LinkedIn</a> · <a href="https://www.joshuaphoebusllc.com">Website</a></p>
+    <p>Related: <a href="https://jphoebus.github.io/data-center-legislation-2026/">What states changed on data centers in 2026</a> · <a href="https://jphoebus.github.io/state-incentive-comparison/">State data center incentives, compared</a> · <a href="https://jphoebus.github.io/data-center-exempt-equipment/">What counts as exempt data center equipment</a> · <a href="https://jphoebus.github.io/tax-incentive-evaluation/">How states check their tax incentives</a> · <a href="https://jphoebus.github.io/spark-grid-tracker/">DOE's SPARK grid selections, tracked</a> · <a href="https://jphoebus.github.io/large-load-tariffs/">Who pays for data center power</a></p>
+    <p>Each state's sources are listed in the table. Where a detail could not be confirmed, the table says so. The underlying data is in <a href="quantum-readiness.csv">quantum-readiness.csv</a>. This comparison is for policy analysis and is not legal, tax, or technical advice.</p>
+  </div>
+</footer>
+
+<script>
+  // Each state button shows or hides that state's column. The table itself is plain HTML,
+  // so it displays even if this script never runs.
+  document.querySelectorAll("#filters .chip").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var on = b.getAttribute("aria-pressed") === "true";
+      b.setAttribute("aria-pressed", on ? "false" : "true");
+      document.querySelectorAll('#table [data-state="' + b.dataset.state + '"]').forEach(function (c) { c.hidden = on; });
+    });
+  });
+</script>
+</body>
+</html>
