@@ -30,9 +30,10 @@ The other comparisons in this series look at decisions states have already made 
 - Whether any state revenue agency rules on quantum equipment under its data center exemption.
 - Maryland's FY2028 budget and construction of IonQ's College Park headquarters.
 - Whether Pennsylvania legislation follows the House committee's August 2026 quantum hearing.
+- Reauthorization of the National Quantum Initiative (S. 3597), introduced January 8, 2026, which is pending in Congress.
 - The FAR Council's proposed rule holding federal contractors to post-quantum standards by the end of 2030.
-- Hybrid facilities: whether quantum systems placed inside AI data centers fall under those campuses' tariffs and reporting rules.
 - Whether any of the five states sets its own post-quantum timeline for state systems.
+- Hybrid facilities: whether quantum systems placed inside AI data centers fall under those campuses' tariffs and reporting rules.
 
 The question I expect to shape the next round: whether states clarify how quantum fits rules written for server farms before the first large quantum facilities arrive, rather than after.
 
