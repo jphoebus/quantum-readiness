@@ -49,6 +49,7 @@ The full comparison is in [quantum-readiness.csv](quantum-readiness.csv), with o
 - [How states check their tax incentives](https://jphoebus.github.io/tax-incentive-evaluation/)
 - [DOE's SPARK grid selections, tracked](https://jphoebus.github.io/spark-grid-tracker/)
 - [Who pays for data center power](https://jphoebus.github.io/large-load-tariffs/)
+- [Which data center load counts](https://jphoebus.github.io/large-load-screening/)
 
 ## About me
 
