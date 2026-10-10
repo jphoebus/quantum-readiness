@@ -4,6 +4,8 @@ Whether the rules Pennsylvania, Virginia, Ohio, Maryland, and Georgia wrote for 
 
 **Interactive version:** [jphoebus.github.io/quantum-readiness](https://jphoebus.github.io/quantum-readiness/)
 
+**All projects:** [jphoebus.github.io](https://jphoebus.github.io/)
+
 ## Why this comparison
 
 The other comparisons in this series look at decisions states have already made about data centers: what they give, what counts, who pays, whether they check, and what changed in 2026. This one looks ahead. States wrote their data center rules before AI changed the scale of the industry, and costs and definitions struggled to keep up. Quantum computing is early enough that states can decide deliberately how it fits, before the first large facilities arrive.
