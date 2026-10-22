@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Are State Rules Ready for Quantum Computing? A Five-State Check | Joshua Phoebus</title>
-<meta name="description" content="Whether the rules Pennsylvania, Virginia, Ohio, Maryland, and Georgia wrote for data centers would apply to quantum computing facilities: tax exemptions, large-load tariffs, reporting, and state strategy. Current as of October 2026.">
+<meta name="description" content="Whether the rules Pennsylvania, Virginia, Ohio, Maryland, and Georgia wrote for data centers would apply to quantum computing facilities: tax exemptions, large-load tariffs, reporting, and state strategy. Current as of October 22, 2026.">
 <meta property="og:title" content="Are State Rules Ready for Quantum Computing? A Five-State Check">
 <meta property="og:description" content="Whether the rules five states wrote for data centers would apply to quantum computing: tax exemptions, tariffs, reporting, and state strategy.">
 <meta property="og:image" content="https://jphoebus.github.io/quantum-readiness/quantum-preview.png">
@@ -163,7 +163,7 @@
   <div class="wrap">
     <p class="home-link"><a href="https://jphoebus.github.io/">← All projects</a></p>
     <h1>Are state rules ready for quantum computing?</h1>
-    <p class="lede measure">Whether the rules Pennsylvania, Virginia, Ohio, Maryland, and Georgia wrote for data centers would apply to quantum computing facilities: tax exemptions, large-load tariffs, reporting, and each state's quantum strategy. Current as of October 2026.</p>
+    <p class="lede measure">Whether the rules Pennsylvania, Virginia, Ohio, Maryland, and Georgia wrote for data centers would apply to quantum computing facilities: tax exemptions, large-load tariffs, reporting, each state's quantum strategy, and how ready each state's own systems are for post-quantum encryption. Current as of October 22, 2026.</p>
     <p class="lede measure" style="margin-top:12px">The other comparisons in this series look at decisions states have already made about data centers. This one looks ahead, applying the lessons of the data center build-out to the next wave of computing infrastructure.</p>
 
     <div class="standing" aria-label="Where each state stands on quantum">
@@ -271,35 +271,84 @@
 <td class="empty" data-state="maryland">None identified</td>
 <td class="empty" data-state="georgia">None identified</td>
 </tr>
-<tr class="group"><th colspan="6" scope="colgroup">Security</th></tr>
-<tr><th scope="row">State post-quantum cryptography mandate</th>
+<tr class="group"><th colspan="6" scope="colgroup">State systems: post-quantum readiness</th></tr>
+<tr><th scope="row">State IT standard naming post-quantum cryptography</th>
+<td data-state="pennsylvania">No. The Office of Administration&#x27;s Encryption Policy (effective Dec. 30, 2025) has no quantum language; its next review is due December 2026.</td>
+<td data-state="virginia">No quantum language found in VITA&#x27;s SEC530 Information Security Standard (rev. June 17, 2025). A 2019 VITA technical brief (guidance, not a standard) says agencies &quot;should identify and inventory dependency on quantum-vulnerable cryptographic algorithms.&quot;</td>
+<td class="empty" data-state="ohio">None identified</td>
+<td data-state="maryland">Yes, as a preference. MD-STD-318-SC-01 (Feb. 18, 2026) gives &quot;preference ... to those designed to resist emerging post-quantum threats&quot; and requires agencies to plan for cryptographic agility; agencies have 18 months to implement the new policy suite.</td>
+<td data-state="georgia">No. GTA&#x27;s Cryptographic Controls standard (SS-08-040, last reviewed Dec. 1, 2024) has no quantum language.</td>
+</tr>
+<tr><th scope="row">Cryptographic inventory required</th>
+<td class="empty" data-state="pennsylvania">None identified</td>
+<td data-state="virginia">Recommended in 2019 guidance; not required</td>
+<td class="empty" data-state="ohio">None identified</td>
+<td data-state="maryland">No. Asset inventories cover hardware, software and data, not cryptography.</td>
+<td class="empty" data-state="georgia">None identified</td>
+</tr>
+<tr><th scope="row">Strategy or roadmap</th>
+<td class="empty" data-state="pennsylvania">None identified</td>
+<td data-state="virginia">A 2025 Joint Commission on Technology and Science report asks how the state could encourage migration to quantum-resistant encryption; it makes no recommendations.</td>
+<td class="empty" data-state="ohio">None identified</td>
+<td data-state="maryland">The 2025 IT Master Plan extends the state&#x27;s security architecture to quantum computing.</td>
+<td data-state="georgia">GTA&#x27;s 2030 Enterprise IT Strategic Vision (April 2026) lists a long-term priority to &quot;integrate quantum-resistant cryptography and long-term security planning.&quot;</td>
+</tr>
+<tr><th scope="row">Legislation</th>
 <td class="empty" data-state="pennsylvania">None identified</td>
 <td class="empty" data-state="virginia">None identified</td>
+<td data-state="ohio">HB 650 would create a Frontier Technologies and Quantum Commission to study security and infrastructure resilience, with a report due Dec. 31, 2026; passed the House 92–0 on Mar. 4, 2026 and is in Senate committee. It does not address encryption.</td>
+<td data-state="maryland">Chapter 628 of 2025 directs the Maryland Cybersecurity Council to &quot;assess and address&quot; risks from quantum computing.</td>
+<td class="empty" data-state="georgia">None identified</td>
+</tr>
+<tr><th scope="row">Procurement terms</th>
+<td class="empty" data-state="pennsylvania">None identified</td>
+<td data-state="virginia">A vendor&#x27;s announcement of a $285 million VITA cybersecurity services contract (Dec. 2025) says it will support &quot;VITA&#x27;s post-quantum cryptography initiatives&quot; (vendor announcement; contract terms not public).</td>
 <td class="empty" data-state="ohio">None identified</td>
 <td class="empty" data-state="maryland">None identified</td>
+<td class="empty" data-state="georgia">None identified</td>
+</tr>
+<tr><th scope="row">Encryption validation standard cited</th>
+<td data-state="pennsylvania">FIPS 140-2 implementation guidance; conformance with NIST&#x27;s Cryptographic Module Validation Program</td>
+<td data-state="virginia">FIPS 140-3</td>
+<td data-state="ohio">FIPS 140-2 (state IT contract terms)</td>
+<td data-state="maryland">FIPS 140-3 (FIPS 140-2 modules allowed until their retirement on Sept. 21, 2026)</td>
+<td data-state="georgia">FIPS 140-2 &quot;or a successor standard&quot;</td>
+</tr>
+<tr><th scope="row">Utility regulator</th>
+<td data-state="pennsylvania">The PUC&#x27;s June 2026 proposed cybersecurity rule for utilities has no quantum language.</td>
+<td data-state="virginia">The SCC&#x27;s November 2025 report on utility cybersecurity has no quantum language.</td>
+<td class="empty" data-state="ohio">None identified</td>
+<td data-state="maryland">None identified; the 2023 Critical Infrastructure Cybersecurity Act has no quantum language.</td>
+<td class="empty" data-state="georgia">None identified</td>
+</tr>
+<tr><th scope="row">Public discussion</th>
+<td data-state="pennsylvania">At the House Communications and Technology Committee&#x27;s Aug. 11, 2026 informational meeting, a witness testified that state agencies &quot;should already be actively preparing for this transition.&quot;</td>
+<td data-state="virginia">VITA&#x27;s August 2026 information security conference included a session on building quantum-resilient systems.</td>
+<td data-state="ohio">HB 650 committee hearings (2026)</td>
+<td data-state="maryland">A Maryland Cybersecurity Council subcommittee raised quantum preparation as a possible agenda topic (Feb. 2026).</td>
 <td class="empty" data-state="georgia">None identified</td>
 </tr>
 <tr class="group"><th colspan="6" scope="colgroup">Status and sources</th></tr>
 <tr><th scope="row">Still to verify</th>
 <td class="empty" data-state="pennsylvania">Nothing outstanding</td>
-<td class="empty" data-state="virginia">Nothing outstanding</td>
-<td class="empty" data-state="ohio">Nothing outstanding</td>
+<td data-state="virginia">SEC530 encryption control (SC-13) text</td>
+<td data-state="ohio">ITS-SEC-01 encryption standard text; PUCO</td>
 <td data-state="maryland">Enacted FY2026 quantum total (sources conflict)</td>
-<td class="empty" data-state="georgia">Nothing outstanding</td>
+<td data-state="georgia">legislature full-text search</td>
 </tr>
 <tr><th scope="row">Sources</th>
-<td class="sources" data-state="pennsylvania"><a href="https://keystonefactory.org/keystone-ai-and-quantum-factory-launch/" rel="noopener">keystonefactory.org</a><a href="https://www.palegis.us/house/committees/meeting-archive?MeetingId=5733" rel="noopener">palegis.us</a><a href="https://penncapital-star.com/technology-information/pa-poised-to-lead-in-quantum-computing-field-state-lawmakers-hear/" rel="noopener">penncapital-star.com</a><a href="https://www.pa.gov/content/dam/copapwp-pagov/en/revenue/documents/incentivescreditsprograms/computerdatacenterequipprog/documents/computer_data_center_equip_exemption_program_guidelines.pdf" rel="noopener">pa.gov</a></td>
-<td class="sources" data-state="virginia"><a href="https://www.governor.virginia.gov/newsroom/news-releases/2026/september-releases/name-1123626-en.html" rel="noopener">governor.virginia.gov</a><a href="https://dls.virginia.gov/commissions/jcots/materials/2025_quantum_report.pdf" rel="noopener">dls.virginia.gov</a><a href="https://law.lis.virginia.gov/vacode/title58.1/chapter6/section58.1-609.3/" rel="noopener">law.lis.virginia.gov</a><a href="https://www.tax.virginia.gov/laws-rules-decisions/rulings-tax-commissioner/23-92" rel="noopener">tax.virginia.gov</a></td>
-<td class="sources" data-state="ohio"><a href="https://www.lsc.ohio.gov/assets/legislation/136/hb96/en0/files/hb96-bor-greenbook-as-enacted-136th-general-assembly.pdf" rel="noopener">lsc.ohio.gov</a><a href="https://miamioh.edu/news/2025/07/state-of-ohio-awards-miami-university-7-million-to-create-quantum-computing-workforce-in-ohio.html" rel="noopener">miamioh.edu</a><a href="https://www.jobsohio.com/newsroom/ohio-blog/ohio-welcomes-worlds-first-quantum-computer-dedicated-to-healthcare-research" rel="noopener">jobsohio.com</a><a href="https://codes.ohio.gov/ohio-revised-code/section-122.175" rel="noopener">codes.ohio.gov</a></td>
-<td class="sources" data-state="maryland"><a href="https://governor.maryland.gov/news/press-releases/governor-moore-announces-1-billion-capital-quantum-initiative" rel="noopener">governor.maryland.gov</a><a href="https://governor.maryland.gov/news/press/pages/Governor-Moore-Signs-FY-2027-Budget,-Delivering-Historic-Education-and-Public-Safety-Investments-without-Raising-Taxes-or-F.aspx" rel="noopener">governor.maryland.gov</a><a href="https://today.umd.edu/briefs/new-state-budget-funds-quantum-health-research-capital-projects-other-umd-priorities" rel="noopener">today.umd.edu</a><a href="https://law.justia.com/codes/maryland/tax-general/title-11/subtitle-2/section-11-239/" rel="noopener">law.justia.com</a></td>
-<td class="sources" data-state="georgia"><a href="https://www.hpcwire.com/off-the-wire/georgia-tech-launches-center-to-advance-quantum-research-and-innovation/" rel="noopener">hpcwire.com</a><a href="https://www.newswise.com/articles/gtri-supports-initiative-to-assess-quantum-computing-efforts" rel="noopener">newswise.com</a><a href="https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-560-12-2-.117" rel="noopener">law.cornell.edu</a></td>
+<td class="sources" data-state="pennsylvania"><a href="https://keystonefactory.org/keystone-ai-and-quantum-factory-launch/" rel="noopener">keystonefactory.org</a><a href="https://www.palegis.us/house/committees/meeting-archive?MeetingId=5733" rel="noopener">palegis.us</a><a href="https://penncapital-star.com/technology-information/pa-poised-to-lead-in-quantum-computing-field-state-lawmakers-hear/" rel="noopener">penncapital-star.com</a><a href="https://www.pa.gov/content/dam/copapwp-pagov/en/revenue/documents/incentivescreditsprograms/computerdatacenterequipprog/documents/computer_data_center_equip_exemption_program_guidelines.pdf" rel="noopener">pa.gov</a><a href="https://www.pa.gov/content/dam/copapwp-pagov/en/oa/documents/policies/it-policies/encryption%20policy.pdf" rel="noopener">pa.gov</a><a href="https://www.pahouse.net/files/Documents/Testimony/2026-08-11_111723__2026-08-11%20CT%20Meeting%20Packet.pdf" rel="noopener">pahouse.net</a><a href="https://www.puc.pa.gov/press-release/2026/puc-advances-proposed-cybersecurity-regulations-for-pennsylvania-utilities-06182026" rel="noopener">puc.pa.gov</a></td>
+<td class="sources" data-state="virginia"><a href="https://www.governor.virginia.gov/newsroom/news-releases/2026/september-releases/name-1123626-en.html" rel="noopener">governor.virginia.gov</a><a href="https://dls.virginia.gov/commissions/jcots/materials/2025_quantum_report.pdf" rel="noopener">dls.virginia.gov</a><a href="https://law.lis.virginia.gov/vacode/title58.1/chapter6/section58.1-609.3/" rel="noopener">law.lis.virginia.gov</a><a href="https://www.tax.virginia.gov/laws-rules-decisions/rulings-tax-commissioner/23-92" rel="noopener">tax.virginia.gov</a><a href="https://vita.ar.virginia.gov/media/vitavirginiagov/it-governance/psgs/pdf/SEC530_Information_Security_Standard.pdf" rel="noopener">vita.ar.virginia.gov</a><a href="https://www.vita.virginia.gov/media/vitavirginiagov/it-governance/ea/pdf/Quantum-Computing_Technical-Brief_VITA-Enterprise-Architecture_January-2019.pdf" rel="noopener">vita.virginia.gov</a><a href="https://www.gdit.com/about-gdit/press-releases/gdit-awarded-usd285-million-virginia-cybersecurity-services-contract/" rel="noopener">gdit.com</a><a href="https://rga.lis.virginia.gov/Published/2025/RD898/PDF" rel="noopener">rga.lis.virginia.gov</a><a href="https://www.vita.virginia.gov/security/isc/conference-program/" rel="noopener">vita.virginia.gov</a></td>
+<td class="sources" data-state="ohio"><a href="https://www.lsc.ohio.gov/assets/legislation/136/hb96/en0/files/hb96-bor-greenbook-as-enacted-136th-general-assembly.pdf" rel="noopener">lsc.ohio.gov</a><a href="https://miamioh.edu/news/2025/07/state-of-ohio-awards-miami-university-7-million-to-create-quantum-computing-workforce-in-ohio.html" rel="noopener">miamioh.edu</a><a href="https://www.jobsohio.com/newsroom/ohio-blog/ohio-welcomes-worlds-first-quantum-computer-dedicated-to-healthcare-research" rel="noopener">jobsohio.com</a><a href="https://codes.ohio.gov/ohio-revised-code/section-122.175" rel="noopener">codes.ohio.gov</a><a href="https://search-prod.lis.state.oh.us/api/v2/general_assembly_136/legislation/hb650/02_PH/html/" rel="noopener">search-prod.lis.state.oh.us</a><a href="https://legiscan.com/OH/bill/HB650/2025" rel="noopener">legiscan.com</a><a href="https://dam.assets.ohio.gov/image/upload/procure.ohio.gov/pdf/DMH001SUP2.pdf" rel="noopener">dam.assets.ohio.gov</a></td>
+<td class="sources" data-state="maryland"><a href="https://governor.maryland.gov/news/press-releases/governor-moore-announces-1-billion-capital-quantum-initiative" rel="noopener">governor.maryland.gov</a><a href="https://governor.maryland.gov/news/press/pages/Governor-Moore-Signs-FY-2027-Budget,-Delivering-Historic-Education-and-Public-Safety-Investments-without-Raising-Taxes-or-F.aspx" rel="noopener">governor.maryland.gov</a><a href="https://today.umd.edu/briefs/new-state-budget-funds-quantum-health-research-capital-projects-other-umd-priorities" rel="noopener">today.umd.edu</a><a href="https://law.justia.com/codes/maryland/tax-general/title-11/subtitle-2/section-11-239/" rel="noopener">law.justia.com</a><a href="https://doit.maryland.gov/policies/ci/Documents/MD-STD-318-SC-01-System-and-Communication-Protection-Standard.pdf" rel="noopener">doit.maryland.gov</a><a href="https://doit.maryland.gov/About-DoIT/Press/pages/State-of-Maryland-Adopts-Modernized-Cybersecurity-and-Privacy-Framework.aspx" rel="noopener">doit.maryland.gov</a><a href="https://doit.maryland.gov/About-DoIT/Documents/Maryland-Information-Technology-Master-Plan-2025.pdf" rel="noopener">doit.maryland.gov</a><a href="https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/SB0294?ys=2025RS" rel="noopener">mgaleg.maryland.gov</a><a href="https://www.umgc.edu/content/dam/umgc/documents/md-cybersecurity-council/minutes-for-february-23-2026.pdf" rel="noopener">umgc.edu</a></td>
+<td class="sources" data-state="georgia"><a href="https://www.hpcwire.com/off-the-wire/georgia-tech-launches-center-to-advance-quantum-research-and-innovation/" rel="noopener">hpcwire.com</a><a href="https://www.newswise.com/articles/gtri-supports-initiative-to-assess-quantum-computing-efforts" rel="noopener">newswise.com</a><a href="https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-560-12-2-.117" rel="noopener">law.cornell.edu</a><a href="https://gta.georgia.gov/document/document/georgia-enterprise-it-strategic-vision-2030/download" rel="noopener">gta.georgia.gov</a><a href="https://gta-psg.georgia.gov/psg/cryptographic-controls-ss-08-040" rel="noopener">gta-psg.georgia.gov</a></td>
 </tr>
 <tr><th scope="row">Last updated</th>
-<td data-state="pennsylvania">2026-10-07</td>
-<td data-state="virginia">2026-10-07</td>
-<td data-state="ohio">2026-10-07</td>
-<td data-state="maryland">2026-10-07</td>
-<td data-state="georgia">2026-10-07</td>
+<td data-state="pennsylvania">2026-10-22</td>
+<td data-state="virginia">2026-10-22</td>
+<td data-state="ohio">2026-10-22</td>
+<td data-state="maryland">2026-10-22</td>
+<td data-state="georgia">2026-10-22</td>
 </tr>
 </tbody>
         </table>
@@ -313,7 +362,14 @@
       <h2>Federal timeline and the states</h2>
       <p><strong>What the federal orders require.</strong> <a href="https://www.govinfo.gov/content/pkg/FR-2026-06-25/pdf/2026-12909.pdf">Executive Order 14412</a> (June 22, 2026) requires federal agencies to move their most sensitive systems to post-quantum cryptography for key establishment by December 31, 2030, and for digital signatures by December 31, 2031. It directs the FAR Council to propose a rule holding covered federal contractors to the same standards by the end of 2030. <a href="https://www.federalregister.gov/documents/2026/06/25/2026-12910/ushering-in-the-next-frontier-of-quantum-innovation">Executive Order 14413</a>, signed the same day, creates a national effort to deliver at least one quantum computer "at a scale intended to initiate the era of quantum-enabled scientific discovery" to a Department of Energy facility, and directs at least three quantum sensor projects to be fielded by September 30, 2028.</p>
       <p><strong>Who they bind.</strong> Federal agencies and, once the rule is final, federal contractors. Neither order binds state governments.</p>
-      <p><strong>How states get pulled in anyway.</strong> Executive Order 14412 directs federal agencies to help critical infrastructure owners and operators with their transitions, and states regulate or run much of that infrastructure, including utilities overseen by state commissions. State systems also exchange data with federal agencies every day. And major technology companies have set earlier targets: Google and Cloudflare have each <a href="https://blog.cloudflare.com/post-quantum-eo-2026/">set 2029 goals</a> for their own post-quantum migrations.</p>
+      <p><strong>How states get pulled in anyway.</strong> Neither order mentions state governments, but several existing channels reach them:</p>
+      <ul class="watch">
+        <li><a href="https://www.govinfo.gov/content/pkg/DCPD-202200355/html/DCPD-202200355.htm">National Security Memorandum 10</a> (May 4, 2022) directs the Department of Homeland Security, through CISA, to "engage with critical infrastructure and SLTT partners regarding the risks posed by quantum computers" and to report annually on accelerating their migration. Executive Order 14412 did not revoke it.</li>
+        <li>Federal data-sharing rules follow NIST's encryption standards. <a href="https://www.irs.gov/privacy-disclosure/encryption-requirements-of-publication-1075">IRS Publication 1075</a> requires federal tax information to be encrypted with "the latest FIPS 140 validated mechanism," and the FBI's <a href="https://www.oag.ca.gov/system/files/media/2026-isrs-001.pdf">CJIS Security Policy</a> (version 6.1, June 2026) requires FIPS 140-3 modules. Neither mentions quantum yet; as NIST's validated modules move to post-quantum algorithms, these rules will carry the change to state agencies.</li>
+        <li>Executive Order 14412 directs federal agencies to help critical infrastructure owners and operators, and states regulate much of that infrastructure through their utility commissions.</li>
+        <li>Major technology companies have set earlier targets: Google and Cloudflare have each <a href="https://blog.cloudflare.com/post-quantum-eo-2026/">set 2029 goals</a> for their own post-quantum migrations.</li>
+      </ul>
+      <p><strong>How states compare nationally.</strong> A <a href="https://www.scrippsnews.com/scripps-news-investigates/q-day-americas-quantum-computing-blindspot/the-coming-q-day-us-states-largely-unprepared-as-quantum-computing-threats-loom">Howard Center and Scripps News review</a> of all 50 states (Sept. 10, 2026) rated four states as actively preparing, including Maryland, and 16 as having taken no action (as reported). New York's <a href="https://its.ny.gov/system/files/documents/2025/06/nys-s14-007-encryption.pdf">2025 encryption standard</a> requires state entities to inventory their cryptographic systems within one year. The State and Local Cybersecurity Grant Program, the main federal cybersecurity grant for states, <a href="https://www.fdd.org/analysis/federal-grant-programs-third-lapse-endangers-state-cybersecurity/">lapsed on Sept. 30, 2026</a> (as reported) and has never named post-quantum work as an eligible use.</p>
       <p><strong>The continuity question.</strong> The 2030 and 2031 deadlines fall after the January 2029 inauguration, and a future administration can revise an executive order. Underneath the orders, the Quantum Computing Cybersecurity Preparedness Act, enacted in 2022, requires federal agencies to inventory their cryptographic systems, and executive action has built on earlier policy rather than replacing it: Executive Order 14412 moved an earlier 2035 target up to 2030. The open question is whether the accelerated dates hold, and whether states set timelines of their own.</p>
     </div>
   </section>
@@ -331,10 +387,15 @@
           <p>A superconducting quantum computer draws roughly 15 to 30 kilowatts, about one-thousandth of a 25 MW large-load threshold and about one-four-hundredth of Pennsylvania's 10 MW reporting trigger. Future utility-scale quantum campuses, and quantum systems inside large AI and supercomputing campuses, could change that.</p>
           <h3>State support runs through budgets, not tax law</h3>
           <p>Maryland's appropriations, Ohio's $7 million institute, and Virginia's regional grant all fund quantum directly rather than through tax exemptions. Unlike open-ended exemptions, budget lines come up for decision every cycle, which makes them easier to evaluate.</p>
+          <h3>State systems are at different starting points</h3>
+          <p>Maryland's February 2026 standard is the only one among the five that names post-quantum encryption in a state IT requirement, as a preference rather than a deadline. Georgia has a long-term goal, Virginia has 2019 guidance, and Pennsylvania and Ohio are at the hearing or study stage. None of the five requires a cryptographic inventory or sets a migration date.</p>
         </div>
         <div>
           <h2>What to watch</h2>
           <ul class="watch">
+            <li>December 2026: Pennsylvania's review of its state Encryption Policy.</li>
+            <li>Dec. 31, 2026: Report due from Ohio's proposed Frontier Technologies and Quantum Commission, if HB 650 passes the Senate.</li>
+            <li>About March 19, 2027: CISA and NIST guidance on minimum elements for a cryptographic bill of materials, due under Executive Order 14412.</li>
             <li>Whether any state revenue agency rules on quantum equipment under its data center exemption.</li>
             <li>Maryland's FY2028 budget and construction of IonQ's College Park headquarters.</li>
             <li>Whether Pennsylvania legislation follows the House committee's August 2026 quantum hearing.</li>
