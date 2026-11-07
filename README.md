@@ -29,7 +29,7 @@ The other comparisons in this series look at decisions states have already made 
 
 ## What stands out
 
-- **Quantum is not in any state's data center law.** All five exemptions define covered equipment in terms of classical computing. None mentions quantum, and no state agency has ruled on whether a quantum processor counts as computer equipment.
+- **Quantum is not in any of the five states' data center laws.** All five exemptions define covered equipment in terms of classical computing. None mentions quantum, and no state agency has ruled on whether a quantum processor counts as computer equipment.
 - **The equipment could fit; the facilities mostly would not.** Cooling and equipment language in every state is broad enough to plausibly reach cryogenic systems. The barrier is the facility test: what counts as a data center, and investment floors of $75 million to $250 million in four states. Maryland's $2 million to $5 million floor is the exception.
 - **Power rules do not reach today's quantum systems.** A superconducting quantum computer draws roughly 15 to 30 kilowatts, about one-thousandth of a 25 MW large-load threshold and about one-four-hundredth of Pennsylvania's 10 MW reporting trigger. Future utility-scale quantum campuses, and quantum systems inside large AI and supercomputing campuses, could change that.
 - **State support runs through budgets, not tax law.** Maryland's appropriations, Ohio's $7 million institute, and Virginia's regional grant fund quantum directly. Unlike open-ended exemptions, budget lines come up for decision every cycle, which makes them easier to evaluate.
