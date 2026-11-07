@@ -1,6 +1,6 @@
 # Are State Rules Ready for Quantum Computing? A Five-State Check
 
-Whether the rules Pennsylvania, Virginia, Ohio, Maryland, and Georgia wrote for data centers would apply to quantum computing facilities: tax exemptions, large-load tariffs, reporting, each state's quantum strategy, and how ready each state's own systems are for post-quantum encryption. Current as of October 22, 2026.
+Whether the rules Pennsylvania, Virginia, Ohio, Maryland, and Georgia wrote for data centers would apply to quantum computing facilities: tax exemptions, large-load tariffs, reporting, each state's quantum strategy, and how ready each state's own systems are for post-quantum encryption. Current as of November 7, 2026.
 
 **Interactive version:** [jphoebus.github.io/quantum-readiness](https://jphoebus.github.io/quantum-readiness/)
 
